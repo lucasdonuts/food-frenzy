@@ -6,9 +6,7 @@ const NavBar = () => {
     <header>
       <nav>
         <Link
-          to="/"
-          exact
-        >
+          to="/">
           <h1>Food Frenzy</h1>
         </Link>
         <div className="nav-links">
