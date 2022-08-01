@@ -1,39 +1,33 @@
 import React from 'react';
 import { NavLink, Link } from 'react-router-dom';
-
-const linkStyles = {
-  display: "inline-block",
-  padding: "12px",
-  margin: "0 6px 6px",
-  background: "darkslateblue",
-  textDecoration: "none",
-  color: "white",
-  textAlign: "center"
-};
+import Nav from 'react-bootstrap/Nav';
+import Button from 'react-bootstrap/Button';
 
 const NavBar = () => {
   return (
     <header>
-      <nav className="nav-bar">
+      <Nav className="justify-content-start nav-bar">
         <Link
           to="/">
           <h1>Food Frenzy</h1>
         </Link>
-        <div className="nav-links">
-          <NavLink
-            to="/favorites"
-            style={ linkStyles }
-          >
+        {/* <div className="nav-links"> */}
+        <NavLink
+          to="/favorites"
+        >
+          <Button>
             Favorites
-          </NavLink>
-          <NavLink
-            to="/categories"
-            style={ linkStyles }
-          >
+          </Button>
+        </NavLink>
+        <NavLink
+          to="/categories"
+        >
+          <Button>
             Categories
-          </NavLink>
-        </div>
-      </nav>
+          </Button>
+        </NavLink>
+        {/* </div> */}
+      </Nav>
     </header>
   )
 }
