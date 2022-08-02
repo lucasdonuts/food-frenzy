@@ -31,7 +31,7 @@ function App() {
             <MealPage />
           </Route>
           <Route path = "/categories">
-            <Categories categories = { categories }/>
+            <Categories categories = { categories } selectedMeals = { meals }/>
           </Route>
           <Route path="/favorites">
             <Favorites />
