@@ -17,7 +17,7 @@ const MealPage = () => {
         setMeal(mealData)
         setIsLoaded(true)
       } )
-  }, [])
+  }, [id])
 
   if(!isLoaded) return (
     <Spinner animation="border" variant="info" />
@@ -54,7 +54,7 @@ const MealPage = () => {
 
     return ingredientsArray.map( ing => {
       return(
-        <li>{ ing }</li>
+        <li key={ ing }>{ ing }</li>
       )
     })
   }

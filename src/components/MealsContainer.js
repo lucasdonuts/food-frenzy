@@ -6,8 +6,8 @@ import MealCard from './MealCard';
 const MealsContainer = ({ meals }) => {
   const mealComponents = meals.map( meal => {
     return (
-      <Link to={ `/meals/${meal.id}` } >
-        <MealCard key={ meal.id } meal={ meal } />
+      <Link key={ meal.id } to={ `/meals/${meal.id}` } >
+        <MealCard meal={ meal } />
       </Link>
     )
   })
