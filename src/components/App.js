@@ -3,7 +3,8 @@ import { Switch, Route } from 'react-router-dom';
 import NavBar from './NavBar';
 import Home from './Home';
 import Favorites from './Favorites';
-import Categories from './Categories'
+import Categories from './Categories';
+import MealPage from './MealPage';
 
 function App() {
   const [ meals, setMeals ] = useState([]);
@@ -19,6 +20,9 @@ function App() {
       <NavBar />
       <div id="main">
         <Switch>
+          <Route path="/meals/:id">
+            <MealPage />
+          </Route>
           <Route path = "/categories">
             <Categories />
           </Route>
