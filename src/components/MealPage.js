@@ -15,8 +15,8 @@ const MealPage = () => {
     fetch(`http://localhost:3001/meals/${id}`)
       .then( res => res.json() )
       .then( mealData => {
-        setMeal(mealData)
-        setIsLoaded(true)
+        setMeal(mealData);
+        setIsLoaded(true);
       } )
   }, [id])
 
@@ -60,18 +60,24 @@ const MealPage = () => {
     })
   }
 
-  fillIngredientList();
+  const handleFavoriteClick = (e) => {
+    console.log(e)
+  }
 
   return (
     <Container id="recipe-container">
-      <Image
-        className="meal-recipe-image"
-        src={ image }
-      />
-      <h4>{ titleCase( name ) }</h4>
-      <Button variant="info" size="lg">
-        Add to Favorites
-      </Button>
+        <Image
+          className="meal-recipe-image"
+          src={ image }
+        />
+        <h4>{ titleCase( name ) }</h4>
+        <Button
+          onClick={ handleFavoriteClick }
+          variant="info"
+          size="sm"
+        >
+          Add to Favorites
+        </Button>
       <hr className="hr-text" data-content="Ingredients" />
       <Container id="ingredients-container">
         <ul id="ingredient-list">
