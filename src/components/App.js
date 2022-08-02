@@ -22,13 +22,25 @@ function App() {
       .then( setCategories )
   }, [])
 
+  const addToFavorites = (meal) => {
+    fetch(`http://localhost:3001/favorites`, {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json'
+      },
+      body: JSON.stringify(meal)
+    })
+    .then( res => res.json() )
+    .then( console.log )
+  }
+
   return (
     <div>
       <NavBar />
       <div id="main">
         <Switch>
           <Route path="/meals/:id">
-            <MealPage />
+            <MealPage addToFavorites={ addToFavorites } />
           </Route>
           <Route path = "/categories">
             <Categories categories = { categories } selectedMeals = { meals }/>

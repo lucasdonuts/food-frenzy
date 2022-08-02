@@ -5,7 +5,7 @@ import Image from 'react-bootstrap/Image';
 import Spinner from 'react-bootstrap/Spinner';
 import Button from 'react-bootstrap/Button';
 
-const MealPage = () => {
+const MealPage = ({ addToFavorites }) => {
   const [meal, setMeal] = useState({});
   const [isLoaded, setIsLoaded] = useState(false);
 
@@ -60,8 +60,8 @@ const MealPage = () => {
     })
   }
 
-  const handleFavoriteClick = (e) => {
-    console.log(e)
+  const handleFavoriteClick = () => {
+    addToFavorites(meal);
   }
 
   return (
