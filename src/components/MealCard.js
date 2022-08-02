@@ -1,15 +1,16 @@
 import React from 'react';
+import Card from 'react-bootstrap/Card';
 
 const MealCard = ({ meal }) => {
   return (
-    <div className="meal-card">
+    <Card border="dark" className="meal-card">
       <img 
         className="meal-image"
         src={ meal.strMealThumb }
         alt={ meal.strMeal }
       />
-      <h4>{ meal.strMeal }</h4>
-    </div>
+      <Card.Header>{ meal.strMeal }</Card.Header>
+    </Card>
   )
 }
 
