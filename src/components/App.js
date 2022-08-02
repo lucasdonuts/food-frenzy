@@ -8,11 +8,18 @@ import MealPage from './MealPage';
 
 function App() {
   const [ meals, setMeals ] = useState([]);
+  const [ categories, setCategories ] = useState([]);
 
   useEffect( () => {
     fetch('http://localhost:3001/meals')
       .then( res => res.json() )
       .then( setMeals )
+  }, [])
+
+  useEffect( () => {
+    fetch('http://localhost:3001/categories')
+      .then( res => res.json() )
+      .then( setCategories )
   }, [])
 
   return (
@@ -24,7 +31,7 @@ function App() {
             <MealPage />
           </Route>
           <Route path = "/categories">
-            <Categories />
+            <Categories categories = { categories }/>
           </Route>
           <Route path="/favorites">
             <Favorites />
