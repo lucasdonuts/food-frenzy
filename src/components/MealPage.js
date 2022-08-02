@@ -18,6 +18,8 @@ const MealPage = () => {
       } )
   }, [])
 
+  if(!isLoaded) return <h3>Loading</h3>
+
   const { strMeal: name, strMealThumb: image } = meal;
   
   const titleCase = (title) => {
@@ -34,8 +36,6 @@ const MealPage = () => {
 
     return formattedTitle;
   }
-
-  if(!isLoaded) return <h3>Loading</h3>
 
   return (
     <Container id="recipe-container">
