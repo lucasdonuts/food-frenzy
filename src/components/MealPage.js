@@ -3,6 +3,7 @@ import { useParams } from 'react-router-dom';
 import Container from 'react-bootstrap/Container';
 import Image from 'react-bootstrap/Image';
 import Spinner from 'react-bootstrap/Spinner';
+import Button from 'react-bootstrap/Button';
 
 const MealPage = () => {
   const [meal, setMeal] = useState({});
@@ -68,6 +69,9 @@ const MealPage = () => {
         src={ image }
       />
       <h4>{ titleCase( name ) }</h4>
+      <Button variant="info" size="lg">
+        Add to Favorites
+      </Button>
       <hr className="hr-text" data-content="Ingredients" />
       <Container id="ingredients-container">
         <ul id="ingredient-list">
