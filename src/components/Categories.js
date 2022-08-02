@@ -1,19 +1,22 @@
 import React from "react";
+import CategoryCard from "./CategoryCard"
 
-const Categories = () => {
-
-    fetch("https://www.themealdb.com/api/json/v1/1/list.php?a=list")
-    .then(resp => resp.json())
-    // .then(catData => console.log(catData))
+const Categories = ({ categories }) => {  
+    const displayCategories = categories.map((category) => (
+        <CategoryCard key = { category.strArea } category = { category.strArea }
+        />
+    ))
+console.log(categories[0])
 
     return(
         <div>
             <h1>Categories</h1>
+            <div>
+                { displayCategories }
+            </div>
         </div>
         
     )
-    
-
 }
 
 export default Categories;
