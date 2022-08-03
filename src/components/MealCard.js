@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import { titleCase } from './MealPage';
 import { Link } from 'react-router-dom';
 import { LinkContainer } from 'react-router-bootstrap';
 import Card from 'react-bootstrap/Card';
@@ -6,6 +7,8 @@ import Button from 'react-bootstrap/Button';
 
 const MealCard = ({ meal }) => {
   const [ isFavorite, setIsFavorite ] = useState(meal.favorite);
+
+  const name = titleCase( meal.strMeal );
 
   const updateMeal = () => {
     console.log(`Inside update before: ${isFavorite}`)
@@ -39,7 +42,7 @@ const MealCard = ({ meal }) => {
       className="meal-card"
     >
       <LinkContainer to={ `/meals/${ meal.id }` } >
-        <Link className="image-wrap">
+        <Link to="#" className="image-wrap">
           <Card.Img
             className="meal-card-image"
             variant="top"
@@ -51,10 +54,10 @@ const MealCard = ({ meal }) => {
           </Card.ImgOverlay>
         </Link>
       </LinkContainer>
-      <Card.Body>
+      <Card.Body className="card-body">
         <LinkContainer to={ `/meals/${ meal.id }` } >
-          <Link>
-            <Card.Title>{ meal.strMeal }</Card.Title>
+          <Link to="#">
+            <Card.Text>{ name }</Card.Text>
           </Link>
         </LinkContainer>
       </Card.Body>

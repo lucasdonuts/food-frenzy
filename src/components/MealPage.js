@@ -6,7 +6,7 @@ import Spinner from 'react-bootstrap/Spinner';
 import Button from 'react-bootstrap/Button';
 import { BsYoutube } from 'react-icons/bs';
 
-const titleCase = (title) => {
+export const titleCase = (title) => {
   const ignoredWords = [ 'to', 'the', 'from', 'of', 'with' ]
 
   const formattedTitle = title.split(' ').map( word => {
