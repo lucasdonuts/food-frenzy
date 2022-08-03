@@ -90,6 +90,10 @@ const MealPage = ({ onMealUpdate }) => {
     })
   }
 
+  const formattedInstructions = instructions.split('\r\n').map( ( step, index ) => {
+      return <p key={ `${ meal.id }-${ index }` }>{ step }</p>
+    })
+
   return (
     <Container id="recipe-container">
         <Image
@@ -105,7 +109,7 @@ const MealPage = ({ onMealUpdate }) => {
           >
             <strong>{ isFavorite ? 'Remove from Favorites' : 'Add to Favorites' }</strong>
           </Button>
-          <a href={ meal.strYoutube } target="_blank">
+          <a href={ meal.strYoutube } target="_blank" rel="noreferrer">
             <Button
               onClick={ handleFavoriteClick }
               variant="outline-secondary"
@@ -132,9 +136,7 @@ const MealPage = ({ onMealUpdate }) => {
       </Container>
       <hr className="hr-text" data-content="Instructions" />
       <Container id="instructions-container">
-        <p>
-          { instructions }
-        </p>
+          { formattedInstructions }
       </Container>
     </Container>
   )

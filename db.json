@@ -55,7 +55,7 @@
       "strImageSource": null,
       "strCreativeCommonsConfirmed": null,
       "dateModified": null,
-      "favorite": false
+      "favorite": true
     },
     {
       "id": "52786",
@@ -1010,7 +1010,8 @@
       "strSource": "",
       "strImageSource": null,
       "strCreativeCommonsConfirmed": null,
-      "dateModified": null
+      "dateModified": null,
+      "favorite": true
     },
     {
       "id": "52796",

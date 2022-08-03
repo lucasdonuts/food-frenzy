@@ -8,7 +8,6 @@ import MealPage from './MealPage';
 
 function App() {
   const [ meals, setMeals ] = useState([]);
-  // const [ favorites, setFavorites ] = useState([]);
   const [ categories, setCategories ] = useState([]);
 
   useEffect( () => {
@@ -16,9 +15,6 @@ function App() {
       .then( res => res.json() )
       .then( mealData => {
         setMeals( () => [ ...mealData ] );
-        // setFavorites( meals.filter( meal => {
-        //   return meal.favorite
-        // } ) )
       } )
       
     fetch('http://localhost:3001/categories')

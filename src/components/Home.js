@@ -5,7 +5,6 @@ const Home = ({ meals }) => {
 
   return (
     <div>
-      <h1>Home Page</h1>
       <MealsContainer meals={ meals } />
     </div>
   )

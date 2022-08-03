@@ -10,7 +10,7 @@ const Favorites = ({ meals }) => {
         return meal.favorite;
       })
     })
-  }, [])
+  }, [ meals ])
 
   return (
     <div>
