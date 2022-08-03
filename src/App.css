@@ -60,16 +60,41 @@ a:hover {
   height: auto;
 }
 
-.meal-card {
-  width: 200px;
-  height: calc(100% - 10px);
-  text-align: center;
-  margin: 10px 0;
+.meal-card-image:hover {
+  filter: grayscale(100%) blur(3px);
 }
 
-.meal-card:hover {
-  color: inherit;
-  transform: scale(1.02);
+.image-wrap {
+  position: relative;
+  width: 100%;
+  height: auto;
+}
+
+.overlay-text {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: rgba(0, 0, 0, 0.5);
+  color: #fff;
+  opacity: 0;
+
+  transition: opacity .2s, visibility .2s;
+}
+
+.image-wrap:hover .overlay-text {
+  visibility: visible;
+  opacity: 1;
+}
+
+.meal-card {
+  width: 200px;
+  text-align: center;
+  margin: 10px 0;
 }
 
 .card-footer {
