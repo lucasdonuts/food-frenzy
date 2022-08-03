@@ -5,7 +5,7 @@ import { LinkContainer } from 'react-router-bootstrap';
 import Card from 'react-bootstrap/Card';
 import Button from 'react-bootstrap/Button';
 
-const MealCard = ({ meal }) => {
+const MealCard = ({ meal, onRemoveFavorite }) => {
   const [ isFavorite, setIsFavorite ] = useState(meal.favorite);
 
   const name = titleCase( meal.strMeal );
@@ -22,16 +22,15 @@ const MealCard = ({ meal }) => {
         favorite: isFavorite
       })
     } )
+      .then( res => res.json() )
+      .then( onRemoveFavorite )
 
     console.log(`Inside update after: ${isFavorite}`)
 
   }
 
-  const handleFavoriteClick = (e) => {
-    e.stopPropagation(e);
-    console.log(`Inside handle before: ${isFavorite}`)
+  const handleFavoriteClick = () => {
     setIsFavorite( isFavorite => !isFavorite );
-    console.log(`Inside handle after: ${isFavorite}`)
 
     updateMeal();
   }

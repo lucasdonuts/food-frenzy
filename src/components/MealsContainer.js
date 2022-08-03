@@ -2,12 +2,13 @@ import React from 'react';
 import Container from 'react-bootstrap/Container';
 import MealCard from './MealCard';
 
-const MealsContainer = ({ meals }) => {
+const MealsContainer = ({ meals, onRemoveFavorite }) => {
   const mealComponents = meals.map( meal => {
     return (
         <MealCard
           key={ meal.id }
           meal={ meal }
+          onRemoveFavorite={ onRemoveFavorite }
         />
     )
   })

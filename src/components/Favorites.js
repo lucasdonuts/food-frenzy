@@ -12,9 +12,15 @@ const Favorites = ({ meals }) => {
     })
   }, [ meals ])
 
+  const onRemoveFavorite = (removedMeal) => {
+    const updatedFavorites = favorites.filter( meal => meal.id !== removedMeal.id )
+
+    setFavorites(updatedFavorites)
+  }
+
   return (
     <div>
-      <MealsContainer meals={ favorites } />
+      <MealsContainer meals={ favorites } onRemoveFavorite={ onRemoveFavorite } />
     </div>
   )
 }
