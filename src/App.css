@@ -173,3 +173,14 @@ a:hover {
   color: black;
   background-color: white;
 }
+
+.recipe-form{
+  justify-content: center;
+  margin-top: 20px;
+}
+
+.recipe-name, .instructions, .ingredients, .image{
+  text-align: Left;
+  margin-top: 20px;
+  margin-bottom: 20px;
+}

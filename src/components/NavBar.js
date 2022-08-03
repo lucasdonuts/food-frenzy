@@ -25,16 +25,16 @@ const NavBar = () => {
             </LinkContainer>
           </Nav.Item>
           <Nav.Item>
-            <LinkContainer to="/categories">
+            <LinkContainer to="/favorites">
               <Nav.Link>
-                Categories
+                Favorites
               </Nav.Link>
             </LinkContainer>
           </Nav.Item>
           <Nav.Item>
-            <LinkContainer to="/favorites">
+            <LinkContainer to="/addrecipe">
               <Nav.Link>
-                Favorites
+                Add Recipe
               </Nav.Link>
             </LinkContainer>
           </Nav.Item>
