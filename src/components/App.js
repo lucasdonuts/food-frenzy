@@ -4,7 +4,8 @@ import NavBar from './NavBar';
 import Home from './Home';
 import Favorites from './Favorites';
 import MealPage from './MealPage';
-import AddRecipe from './AddRecipe'
+import AddRecipe from './AddRecipe';
+import Categories from './Categories';
 
 function App() {
   const [ meals, setMeals ] = useState([]);
@@ -52,7 +53,7 @@ function App() {
             <Favorites meals={ meals } />
           </Route>
           <Route exact path="/">
-            <Home meals={ meals } />
+            <Home meals={ meals } categories={ categories } />
           </Route>
         </Switch>
       </div>
