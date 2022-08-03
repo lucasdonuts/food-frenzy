@@ -1,9 +1,20 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
+import MealsContainer from './MealsContainer';
 
-const Favorites = () => {
+const Favorites = ({ meals }) => {
+  const [favorites, setFavorites ] = useState([]);
+  
+  useEffect( () => {
+    setFavorites( () => {
+      return meals.filter( meal => {
+        return meal.favorite;
+      })
+    })
+  }, [])
+
   return (
     <div>
-      <h1>Favorites</h1>
+      <MealsContainer meals={ favorites } />
     </div>
   )
 }

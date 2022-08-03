@@ -1,5 +1,7 @@
 import React from 'react';
 import Card from 'react-bootstrap/Card';
+import Button from 'react-bootstrap/Button';
+import { BsYoutube } from 'react-icons/bs';
 
 const MealCard = ({ meal }) => {
 
@@ -17,6 +19,18 @@ const MealCard = ({ meal }) => {
       <Card.Body>
         <Card.Subtitle>{ meal.strMeal }</Card.Subtitle>
       </Card.Body>
+        <a href={ meal.strYoutube } target="_blank">
+          <Card.Footer className="d-grid gap-2">
+            <Button variant="light" size="sm">
+              <BsYoutube style={{
+                color: "red",
+                fontSize: "40px",
+                marginRight: "10px"
+              }}/>
+              <strong>Watch on YouTube</strong>
+            </Button>
+          </Card.Footer>
+        </a>
     </Card>
   )
 }
