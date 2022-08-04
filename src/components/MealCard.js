@@ -5,34 +5,35 @@ import { LinkContainer } from 'react-router-bootstrap';
 import Card from 'react-bootstrap/Card';
 import Button from 'react-bootstrap/Button';
 
-const MealCard = ({ meal, onRemoveFavorite, onSetCategory }) => {
+const MealCard = ({ meal, onRemoveFavorite, onMealUpdate }) => {
   const [ isFavorite, setIsFavorite ] = useState(meal.favorite);
 
   const name = titleCase( meal.strMeal );
 
   const updateMeal = () => {
-    console.log(`Inside update before: ${isFavorite}`)
-
     fetch( `http://localhost:3001/meals/${meal.id}`, {
       method: 'PATCH',
       headers: {
         'Content-Type': 'application/json'
       },
       body: JSON.stringify({
-        favorite: isFavorite
+        favorite: !isFavorite
       })
     } )
-      .then( res => res.json() )
-      .then( onRemoveFavorite )
-
-    console.log(`Inside update after: ${isFavorite}`)
-
-  }
+       .then( res => res.json() )
+       .then( onRemoveFavorite )
+       .then( onMealUpdate )
+   }
 
   const handleFavoriteClick = () => {
     setIsFavorite( isFavorite => !isFavorite );
 
-    updateMeal();
+    const updatedMeal = {
+      favorite: !meal.favorite,
+      ...meal
+    }
+
+    updateMeal(updatedMeal);
   }
 
   return (
@@ -61,9 +62,8 @@ const MealCard = ({ meal, onRemoveFavorite, onSetCategory }) => {
         </LinkContainer>
       </Card.Body>
       <Card.Footer className="d-grid gap-2">
-        <Button
+        <Button className="favorite-button"
           onClick={ handleFavoriteClick }
-          variant="success"
           size="sm"
         >
           <strong>{ isFavorite ? 'Remove from Favorites' : 'Add to Favorites' }</strong>

@@ -2,7 +2,7 @@ import React from 'react';
 import MealsContainer from './MealsContainer';
 import CategoryDropdown from './CategoryDropdown';
 
-const Home = ({ meals, categories, onCategorySelect, selectedCategory }) => {
+const Home = ({ meals, categories, onCategorySelect, selectedCategory, onMealUpdate }) => {
   
   return (
     <div className="main-page">
@@ -11,7 +11,7 @@ const Home = ({ meals, categories, onCategorySelect, selectedCategory }) => {
         onCategorySelect={ onCategorySelect }
         selectedCategory={ selectedCategory }
       />
-      <MealsContainer meals={ meals }/>
+      <MealsContainer meals={ meals } onMealUpdate={ onMealUpdate }/>
     </div>
   )
 }

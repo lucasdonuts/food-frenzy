@@ -44,6 +44,7 @@ const MealPage = ({ onMealUpdate }) => {
   )
 
   const updateMeal = (mealToUpdate) => {
+    console.log("changed")
     fetch(`http://localhost:3001/meals/${mealToUpdate.id}`, {
       method: 'PATCH',
       headers: {
@@ -67,8 +68,7 @@ const MealPage = ({ onMealUpdate }) => {
       favorite: !meal.favorite,
       ...meal
     }
-
-    updateMeal(updatedMeal);
+     updateMeal(updatedMeal);
   }
 
   const fillIngredientList = () => {

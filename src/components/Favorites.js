@@ -6,9 +6,11 @@ const Favorites = ({
     meals,
     categories,
     onCategorySelect,
-    selectedCategory
+    selectedCategory,
+    onMealUpdate
   }) => {
   const [favorites, setFavorites ] = useState([]);
+  const [ isFavorite, setIsFavorite ] = useState(meals.favorite);
   
   useEffect( () => {
     setFavorites( () => {
@@ -20,9 +22,20 @@ const Favorites = ({
   }, [ meals ])
 
   const onRemoveFavorite = (removedMeal) => {
-    const updatedFavorites = favorites.filter( meal => meal.id !== removedMeal.id )
-
-    setFavorites(updatedFavorites)
+    console.log("removed")
+    fetch( `http://localhost:3001/meals/${removedMeal.id}`, {
+      method: 'PATCH',
+      headers: {
+        'Content-Type': 'application/json'
+      },
+      body: JSON.stringify({
+        favorite: !isFavorite
+      })
+    } )
+       .then( res => res.json() )
+       .then( () => {
+        setFavorites(favorites.filter( meal => meal.id !== removedMeal.id ))
+       })
   }
 
   return (

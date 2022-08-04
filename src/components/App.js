@@ -66,6 +66,7 @@ function App() {
               categories={ categories }
               selectedCategory={ selectedCategory }
               onCategorySelect={ onCategorySelect }
+              onMealUpdate={ onMealUpdate }
             />
           </Route>
           <Route exact path="/">
@@ -74,6 +75,7 @@ function App() {
               categories={ categories }
               selectedCategory={ selectedCategory }
               onCategorySelect={ onCategorySelect }
+              onMealUpdate={ onMealUpdate }
             />
           </Route>
         </Switch>

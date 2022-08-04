@@ -1,23 +1,29 @@
-/* :root {
-  --
-} */
+@import url('https://fonts.googleapis.com/css2?family=Space+Mono&display=swap');
+
+:root {
+  --taupe-gray:#8e9189;
+  --purple-taupe: #494449;
+  --rocket-metallic: #857f74;
+  --Isabelline: #eeefeb;
+  --pale-string-bud: #ddeac1;
+
+  --font: font-family: Verdana, Geneva, Tahoma, sans-serif;
+
+} 
 
 body {
   margin: 0 0 20px 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+  font-family: var(--font);
+  font-size: large;
+  background: var(--Isabelline);
 }
 
 code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+  font-family: var(--font);
 }
 
 a {
-  color: inherit;
+  color: var(--purple-taupe);
   text-decoration: none;
 }
 
@@ -31,17 +37,23 @@ a:hover {
 
 /* NavBar */
 .navbar {
-  /* display: flex; */
-  /* justify-content: space-between; */
-  height: 60px;
+  height: 80px;
   line-height: 60px;
   padding-left: 1.5rem;
-  margin-bottom: 10px;
+  font-size: larger;
+  font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+
+.nav-bar{
+  background-color: var(--purple-taupe);
+  box-shadow: 2px 2px 5px 2px black
 }
 
 .navbar-brand {
-  color: white;
+  color: var(--pale-string-bud);
+  font-family: 'Space Mono', monospace;
   font-weight: 600;
+  font-size: xx-large;
 }
 
 #logo {
@@ -51,8 +63,8 @@ a:hover {
 
 .navbar-nav .nav-link.active,
 .nav-link:focus {
-  background-color: white;
-  color: black;
+  background-color: inherit;
+  color: var(--taupe-gray);
 }
 
 /* MealsContainer */
@@ -67,6 +79,7 @@ a:hover {
   width: 200px;
   text-align: center;
   margin: 10px 0;
+  box-shadow: 5px 5px 10px
 }
 
 .meal-card-image {
@@ -109,19 +122,26 @@ a:hover {
   display: flex;
   flex-direction: column;
   justify-content: center;
+  background-color: var(--pale-string-bud);
 }
 
 .card-footer {
   padding: 0;
 }
 
+.favorite-button{
+  background: var(--purple-taupe);
+  border-color: var(--pale-string-bud);
+  color: white;
+}
+
 /* MealPage */
 #recipe-container {
-  margin-top: 10px;
   max-width: 1000px;
 }
 
 .meal-recipe-image {
+  margin-top: 20px;
   height: 400px;
   border-radius: 25px;
 }
@@ -134,6 +154,7 @@ a:hover {
 
 .button-success.active {
   min-width: 170px;
+  background-color: white;
 }
 
 #ingredient-list {
@@ -183,27 +204,36 @@ a:hover {
   padding: 20px
 }
 
-.recipe-form{
-  border: 2px solid black;
-  background-color:blanchedalmond;
-  border-radius: 10px;
+.form-heading{
+  font-family: 'Space Mono', monospace;
   margin-top: 20px;
+  font-weight: 600;
+}
+
+.recipe-form{
+  border-radius: 10px;
+  margin-top: 40px;
+  box-shadow: 5px 5px 20px;
+  background-color: var(--pale-string-bud);
+}
+
+.submit{
+  background-color: var(--purple-taupe);
+  border-color: var(--purple-taupe)
 }
 
 .custom-select{
   width: 180px;
-  height: 30px;
+  height: 40px;
   text-align: center;
   color: white;
-  font-size: medium;
+  font-size: larger;
   border-radius: 10px;
-  background: #0d925b;
+  background: var(--purple-taupe);
   padding-bottom: 2px;
   padding-left: 15px;
+  margin: 20px
 }
 
-.main-page{
-  margin-top: 20px;
-}
 
 

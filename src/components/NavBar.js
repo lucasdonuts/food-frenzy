@@ -8,7 +8,7 @@ const NavBar = () => {
 
   return (
     <>
-      <Navbar bg="dark" variant="dark" id="nav-bar">
+      <Navbar className="nav-bar "id="nav-bar">
         <Nav>
           <Nav.Item>
             <LinkContainer id="logo" exact to="/">

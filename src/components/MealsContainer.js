@@ -2,7 +2,7 @@ import React from 'react';
 import Container from 'react-bootstrap/Container';
 import MealCard from './MealCard';
 
-const MealsContainer = ({ meals, onRemoveFavorite, onSetCategory}) => {
+const MealsContainer = ({ meals, onRemoveFavorite, onMealUpdate }) => {
   const noMealsMessage = <h4>No meals to display. Add one here.</h4>
 
   const mealComponents = meals.map( meal => {
@@ -11,7 +11,7 @@ const MealsContainer = ({ meals, onRemoveFavorite, onSetCategory}) => {
           key={ meal.id }
           meal={ meal }
           onRemoveFavorite={ onRemoveFavorite }
-          onSetCategory={ onSetCategory }
+          onMealUpdate={ onMealUpdate }
         />
     )
   })

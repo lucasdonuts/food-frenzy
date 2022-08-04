@@ -112,7 +112,7 @@
       "strImageSource": null,
       "strCreativeCommonsConfirmed": null,
       "dateModified": null,
-      "favorite": true
+      "favorite": false
     },
     {
       "id": "52901",
@@ -169,7 +169,7 @@
       "strImageSource": null,
       "strCreativeCommonsConfirmed": null,
       "dateModified": null,
-      "favorite": true
+      "favorite": false
     },
     {
       "id": "52811",
@@ -283,7 +283,7 @@
       "strImageSource": null,
       "strCreativeCommonsConfirmed": null,
       "dateModified": null,
-      "favorite": true
+      "favorite": false
     },
     {
       "id": "52816",
@@ -339,7 +339,8 @@
       "strSource": "http://www.seriouseats.com/recipes/2016/03/roasted-eggplant-tahini-pine-nut-lentil-vegan-experience-recipe.html",
       "strImageSource": null,
       "strCreativeCommonsConfirmed": null,
-      "dateModified": null
+      "dateModified": null,
+      "favorite": false
     },
     {
       "id": "52933",
@@ -395,7 +396,8 @@
       "strSource": "http://allrecipes.com/recipe/234025/rappie-pie/",
       "strImageSource": null,
       "strCreativeCommonsConfirmed": null,
-      "dateModified": null
+      "dateModified": null,
+      "favorite": false
     },
     {
       "id": "52908",
@@ -619,7 +621,8 @@
       "strSource": "http://caribbeanpot.com/caribbean-red-peas-soup/",
       "strImageSource": null,
       "strCreativeCommonsConfirmed": null,
-      "dateModified": null
+      "dateModified": null,
+      "favorite": false
     },
     {
       "id": "53049",
@@ -675,7 +678,8 @@
       "strSource": "https://www.nyonyacooking.com/recipes/apam-balik~SJ5WuvsDf9WQ",
       "strImageSource": null,
       "strCreativeCommonsConfirmed": null,
-      "dateModified": null
+      "dateModified": null,
+      "favorite": false
     },
     {
       "id": "53050",
@@ -787,7 +791,8 @@
       "strSource": "http://www.goodtoknow.co.uk/recipes/536028/chocolate-gateau",
       "strImageSource": null,
       "strCreativeCommonsConfirmed": null,
-      "dateModified": null
+      "dateModified": null,
+      "favorite": false
     },
     {
       "id": "52765",
@@ -899,7 +904,8 @@
       "strSource": "https://www.instagram.com/p/BHyuMZ1hZX0",
       "strImageSource": null,
       "strCreativeCommonsConfirmed": null,
-      "dateModified": null
+      "dateModified": null,
+      "favorite": false
     },
     {
       "id": "52788",
@@ -1012,7 +1018,7 @@
       "strImageSource": null,
       "strCreativeCommonsConfirmed": null,
       "dateModified": null,
-      "favorite": true
+      "favorite": false
     },
     {
       "id": "52796",
@@ -1124,7 +1130,8 @@
       "strSource": "http://twistedfood.co.uk/chicken-fajita-mac-n-cheese/",
       "strImageSource": null,
       "strCreativeCommonsConfirmed": null,
-      "dateModified": null
+      "dateModified": null,
+      "favorite": false
     },
     {
       "id": "52840",
@@ -8161,6 +8168,15 @@
       "strIngredient2": "Soup",
       "id": "vzuRsRU",
       "favorite": false
+    },
+    {
+      "id": "SUeNbTs"
+    },
+    {
+      "id": "bJjOtfb"
+    },
+    {
+      "id": "DbNu7Cm"
     }
   ],
   "categories": [

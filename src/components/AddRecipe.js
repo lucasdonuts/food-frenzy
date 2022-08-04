@@ -126,7 +126,7 @@ const AddRecipe = ( { addMeal, categories } ) => {
             </Row>
             <Row className="mb-3">
               
-              <Button type ="submit" variant="success">Add Recipe</Button>
+              <Button type ="submit" className="submit">Add Recipe</Button>
 
             </Row>
           </Form>
