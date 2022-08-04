@@ -5,7 +5,7 @@ import CategoryDropdown from './CategoryDropdown';
 const Home = ({ meals, categories, onCategorySelect, selectedCategory }) => {
   
   return (
-    <div>
+    <div className="main-page">
       <CategoryDropdown
         categories={ categories }
         onCategorySelect={ onCategorySelect }
