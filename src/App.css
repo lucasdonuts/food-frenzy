@@ -14,8 +14,12 @@
   --favorite-btn-color: 73, 17, 28; /* #49111c */
 }
 
+body, html {
+  height: 100%;
+}
+
 body {
-  margin: 0 0 20px 0;
+  margin: 0;
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
     'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
     sans-serif;
@@ -41,6 +45,7 @@ a:hover {
 #main {
   text-align: center;
   margin-top: 20px;
+  min-height: 758px;
 }
 
 .custom-select {
@@ -68,6 +73,7 @@ a:hover {
 .navbar-brand {
   color: rgba(var(--elegant-bg), 1);
   font-weight: 600;
+  font-size: 2rem;
   font-family: 'Sedgwick Ave', cursive;
 }
 
@@ -194,14 +200,26 @@ a:hover {
   background-color: rgba(var(--favorite-btn-color), var(--favorite-btn-hover-opacity));
 }
 
+.btn-success:active {
+  border: none !important;
+  box-shadow: none !important;
+  background-color: rgba(var(--favorite-btn-color), var(--favorite-btn-hover-opacity));
+}
+
+.btn-success:focus {
+  background-color: rgba(var(--favorite-btn-color), 0.5);
+  border: none !important;
+  box-shadow: none !important;
+}
+
 .favorite-btn:focus {
   background-color: rgba(var(--favorite-btn-color), 1);
-  border: none;
-  box-shadow: none;
+  border: none !important;
+  box-shadow: none !important;
 }
 
 .favorite-btn:active {
-  border: none;
+  border: none !important;
   box-shadow: none !important;
 }
 
@@ -267,7 +285,15 @@ a:hover {
   width: 25%;
 }
 
-#footer {
+.footer {
   background-color: rgba(var(--elegant-purple), 1);
+  border-top: 1px solid #E7E7E7;
+  text-align: center;
+  padding: 0;
+  position: relative;
+  left: 0;
+  bottom: 0;
+  height: 60px;
+  line-height: 60px;
   width: 100%;
 }

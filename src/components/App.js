@@ -23,7 +23,7 @@ function App() {
       .then( res => res.json() )
       .then( setCategories )
 
-  }, [ ])
+  }, [ meals ])
 
   const onMealUpdate = (updatedMeal) => {
     setMeals( meals => meals.map( meal => {
