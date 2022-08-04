@@ -8150,6 +8150,16 @@
       "strIngredient9": "unsalted butter, cubed ",
       "strIngredient10": "chopped chives",
       "id": "EUkkhah"
+    },
+    {
+      "strMeal": "Fart Soup",
+      "strInstructions": "Fart into a soup",
+      "strSource": "https://i.ebayimg.com/images/g/Z6IAAOSwAK9hyQl4/s-l500.jpg",
+      "strMeasure1": "One Big",
+      "strIngredient1": "Fart",
+      "strMeasure2": "One Can of",
+      "strIngredient2": "Soup",
+      "id": "vzuRsRU"
     }
   ],
   "categories": [

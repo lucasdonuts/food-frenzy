@@ -55,7 +55,10 @@ function App() {
             <MealPage onMealUpdate={ onMealUpdate } />
           </Route>
           <Route path = "/addrecipe">
-            <AddRecipe addMeal = { addMeal }/>
+            <AddRecipe
+              addMeal = { addMeal }
+              categories={ categories }
+            />
           </Route>
           <Route path="/favorites">
             <Favorites
