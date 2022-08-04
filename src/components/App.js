@@ -33,8 +33,8 @@ function App() {
     }))
   }
 
-  const addMeal = (addedMeal) =>{
-    setMeals([...meals, addedMeal])
+  const addMeal = (addedMeal) => {
+    setMeals([addedMeal, ...meals])
   }
 
   return (

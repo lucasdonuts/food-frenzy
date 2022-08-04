@@ -15,13 +15,13 @@ const Categories = ({ meals }) => {
 
     const onSetCategory = (category) => {
         const categorizedMeals = selectedCategory.filter( meal => meal.strArea !== category.strArea )
-    
+
         setSelectedCategory(categorizedMeals)
       }
 
       return(
         <div>
-            <MealsContainer meals = { selectedCategory } onSetCategory = { onSetCategory }/>
+            <CategoryDropDown onSetCategory = {onSetCategory}/>
         </div>
       )
 

@@ -5,7 +5,7 @@ import { LinkContainer } from 'react-router-bootstrap';
 import Card from 'react-bootstrap/Card';
 import Button from 'react-bootstrap/Button';
 
-const MealCard = ({ meal, onRemoveFavorite }) => {
+const MealCard = ({ meal, onRemoveFavorite, onSetCategory }) => {
   const [ isFavorite, setIsFavorite ] = useState(meal.favorite);
 
   const name = titleCase( meal.strMeal );

@@ -6,7 +6,7 @@ import Col from 'react-bootstrap/Col';
 import Row from 'react-bootstrap/Row';
 import { HiPlusSm } from 'react-icons/hi';
 
-const AddRecipe = ( addMeal ) => {
+const AddRecipe = ( {addMeal} ) => {
     const [formData, setFormData ] = useState({ });
     const [ ingredientCount, setIngredientCount ] = useState(3);
 
@@ -48,18 +48,18 @@ const AddRecipe = ( addMeal ) => {
     }
 
     const handleSubmit = (e) => {
-        e.preventDefault();
+        console.log("submitted")
+         e.preventDefault();
 
-        fetch("http://localhost:3001/meals",{
-        method : "POST",
-        headers : { "Content-Type" : "application/json"},
-        body : JSON.stringify(formData)
-      })
-      .then(resp => resp.json())
-      .then((mealData) => {
-        addMeal(mealData)
-      })
-      e.target.reset()
+          fetch("http://localhost:3001/meals",{
+          method : "POST",
+          headers : { "Content-Type" : "application/json"},
+          body : JSON.stringify(formData)
+        })
+        .then(resp => resp.json())
+        .then((mealData) => addMeal(mealData))
+
+         e.target.reset()
     }
 
     const handleClick = () => {
@@ -73,26 +73,21 @@ const AddRecipe = ( addMeal ) => {
       })
     }
 
-    console.log(formData)
-
     return(
       <Container className = "recipe-form">
-          <h1>Add Your Recipe!</h1>
-          <Form>
-            <Row className="mb-3">
-              <Button type ="submit">Add Recipe</Button>
-            </Row>
+          <h1 className = "form-heading">Add Your Recipe!</h1>
+          <Form onSubmit = { handleSubmit } >
             <Row>
               <Col>
-                <Form.Group className= "recipe-name" controlId="formRecipeName">
+                <Form.Group className= "recipe-name" controlId="strMeal" onChange = {handleChange}>
                     <Form.Label>Recipe Name</Form.Label>
                     <Form.Control type="text" placeholder="Enter recipe name"/>
                 </Form.Group>
-                <Form.Group className= "instructions" controlId="formInstructions">
+                <Form.Group className= "instructions" controlId="strInstructions" onChange = {handleChange}>
                     <Form.Label>Instructions</Form.Label>
                     <Form.Control as="textarea" rows={5} placeholder="Insert instructions"/>
                 </Form.Group>
-                <Form.Group className= "image" controlId="formImage">
+                <Form.Group className= "image" controlId="strSource" onChange = {handleChange}>
                     <Form.Label>Image</Form.Label>
                     <Form.Control type="text" placeholder="Input Image URL"/>
                 </Form.Group>
@@ -104,6 +99,9 @@ const AddRecipe = ( addMeal ) => {
                   <HiPlusSm /><small>Add Ingredient</small>
                 </div>
               </Col>
+            </Row>
+            <Row className="mb-3">
+              <Button type ="submit" variant="success">Add Recipe</Button>
             </Row>
           </Form>
       </Container>
