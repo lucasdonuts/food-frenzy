@@ -8155,9 +8155,9 @@
       "strMeal": "Fart Soup",
       "strInstructions": "Fart into a soup",
       "strSource": "https://i.ebayimg.com/images/g/Z6IAAOSwAK9hyQl4/s-l500.jpg",
-      "strMeasure1": "One Big",
+      "strMeasure1": "One Large",
       "strIngredient1": "Fart",
-      "strMeasure2": "One Can of",
+      "strMeasure2": "One Can",
       "strIngredient2": "Soup",
       "id": "vzuRsRU"
     }
@@ -8294,15 +8294,6 @@
     {
       "category": "Japanese",
       "id": 33
-    },
-    {
-      "category": "Thai",
-      "id": 34
-    },
-    {
-      "category": "Japanese",
-      "id": 35
     }
-  ],
-  "favorites": []
+  ]
 }

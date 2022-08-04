@@ -108,7 +108,7 @@ const AddRecipe = ( { addMeal, categories } ) => {
                     <Form.Control as="textarea" rows={5} placeholder="Insert instructions"/>
                 </Form.Group>
 
-                <Form.Group className= "image" controlId="strSource" onChange = {handleChange}>
+                <Form.Group className= "image" controlId="strMealThumb" onChange = {handleChange}>
                     <Form.Label>Image</Form.Label>
                     <Form.Control type="text" placeholder="Input Image URL"/>
                 </Form.Group>

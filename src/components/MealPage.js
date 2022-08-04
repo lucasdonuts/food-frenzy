@@ -75,7 +75,11 @@ const MealPage = ({ onMealUpdate }) => {
     const ingredientsArray = []
 
     for(let i = 1; i <=20; i++) {
-      if( meal[`strIngredient${i}`] === '' || meal[`strMeasure${i}`] === '' ) { break }
+      if( meal[`strIngredient${i}`] === ''
+        || meal[`strMeasure${i}`] === ''
+        || !meal[`strIngredient${i}`]
+        || !meal[`strMeasure${i}`]
+        ) { break }
 
       const ingredient = `${meal[`strIngredient${i}`].charAt(0).toUpperCase()}${meal[`strIngredient${i}`].slice(1)}`;
       const measurement = `${meal[`strMeasure${i}`].charAt(0).toUpperCase()}${meal[`strMeasure${i}`].slice(1)}`;
@@ -115,11 +119,14 @@ const MealPage = ({ onMealUpdate }) => {
               variant="outline-secondary"
               size="sm"
             >
-              <BsYoutube style={{
-                color: "red",
-                fontSize: "40px",
-                marginRight: "10px"
-              }}/>
+              <BsYoutube
+                style={{
+                  color: "red",
+                  fontSize: "40px",
+                  marginRight: "10px"
+                }}
+                disabled={ meal.strYoutube ? false : true }
+              />
               <strong>
                 Watch on Youtube
               </strong>
