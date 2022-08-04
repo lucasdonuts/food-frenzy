@@ -59,8 +59,8 @@ a:hover {
 /* NavBar */
 .navbar {
   background-color: rgba(var(--elegant-purple), 1) !important;
-  height: 60px;
-  line-height: 60px;
+  height: 80px;
+  line-height: 80px;
   padding-left: 1.5rem;
   margin-bottom: 10px;
 }
@@ -80,10 +80,14 @@ a:hover {
   color: var(--elegant-bg);
 }
 
+.navbar-nav .nav-link {
+  color: rgba(var(--elegant-bg), 1);
+}
+
 .navbar-nav .nav-link.active,
 .nav-link:focus {
   background-color: rgba(var(--elegant-light-green), 1);
-  color: black;
+  color: rgba(var(--elegant-purple), 1);
   padding-bottom: 0;
 }
 
@@ -104,6 +108,7 @@ a:hover {
   width: 200px;
   text-align: center;
   margin: 10px 0;
+  box-shadow: 5px 5px 10px;
 }
 
 .meal-card-image {
@@ -185,7 +190,7 @@ a:hover {
   background-color: rgba(var(--favorite-btn-color), 1);
 }
 
-.favorite-btn:hover {
+.btn-success:hover {
   background-color: rgba(var(--favorite-btn-color), var(--favorite-btn-hover-opacity));
 }
 

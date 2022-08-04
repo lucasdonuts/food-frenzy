@@ -20,21 +20,21 @@ const NavBar = () => {
           <Nav.Item>
             <LinkContainer exact to="/">
               <Nav.Link>
-                Home
+                <strong>Home</strong>
               </Nav.Link>
             </LinkContainer>
           </Nav.Item>
           <Nav.Item>
             <LinkContainer to="/favorites">
               <Nav.Link>
-                Favorites
+                <strong>Favorites</strong>
               </Nav.Link>
             </LinkContainer>
           </Nav.Item>
           <Nav.Item>
             <LinkContainer to="/addrecipe">
               <Nav.Link>
-                Add Recipe
+                <strong>Add Recipe</strong>
               </Nav.Link>
             </LinkContainer>
           </Nav.Item>
