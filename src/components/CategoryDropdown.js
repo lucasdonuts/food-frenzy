@@ -14,6 +14,7 @@ function CategoryDropDown({ selectedCategory, onCategorySelect, categories }){
 
     return(
       <select
+        className = "custom-select"
         id="category-dropdown"
         value={ selectedCategory }
         onChange={ e => onCategorySelect( e.target.value ) }

@@ -189,3 +189,21 @@ a:hover {
   border-radius: 10px;
   margin-top: 20px;
 }
+
+.custom-select{
+  width: 180px;
+  height: 30px;
+  text-align: center;
+  color: white;
+  font-size: medium;
+  border-radius: 10px;
+  background: #0d925b;
+  padding-bottom: 2px;
+  padding-left: 15px;
+}
+
+.main-page{
+  margin-top: 20px;
+}
+
+
