@@ -98,6 +98,8 @@ const MealPage = ({ onMealUpdate }) => {
       return <p key={ `${ meal.id }-${ index }` }>{ step }</p>
     })
 
+  const hasVideoLink = !!meal.strYoutube
+
   return (
     <Container id="recipe-container">
         <Image
@@ -115,17 +117,24 @@ const MealPage = ({ onMealUpdate }) => {
           </Button>
           <a href={ meal.strYoutube } target="_blank" rel="noreferrer">
             <Button
-              onClick={ handleFavoriteClick }
-              variant="outline-secondary"
+              variant={ meal.strYoutube ? "outline-secondary" : "secondary" }
               size="sm"
+              disabled={ meal.strYoutube ? false : true }
             >
               <BsYoutube
-                style={{
-                  color: "red",
-                  fontSize: "40px",
-                  marginRight: "10px"
-                }}
-                disabled={ meal.strYoutube ? false : true }
+                style={
+                  meal.strYoutube ?
+                  {
+                    color: "red",
+                    fontSize: "40px",
+                    marginRight: "10px"
+                  }
+                  : {
+                    color: "white",
+                    fontSize: "40px",
+                    marginRight: "10px"
+                  }
+                }
               />
               <strong>
                 Watch on Youtube

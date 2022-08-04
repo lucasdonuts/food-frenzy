@@ -8,7 +8,7 @@ function CategoryDropDown({ selectedCategory, onCategorySelect, categories }){
     const category = cat.category;
 
     return (
-      <option value={ category }>{ category }</option>
+      <option key={ category } value={ category }>{ category }</option>
     )
   })
 

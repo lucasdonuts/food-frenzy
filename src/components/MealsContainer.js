@@ -3,12 +3,7 @@ import Container from 'react-bootstrap/Container';
 import MealCard from './MealCard';
 
 const MealsContainer = ({ meals, onRemoveFavorite, onSetCategory}) => {
-
-  
-  // add Cleanup function
-  const noMealsMessage = [
-    <h4>No meals to display. Add one here.</h4>
-  ]
+  const noMealsMessage = <h4>No meals to display. Add one here.</h4>
 
   const mealComponents = meals.map( meal => {
     return (

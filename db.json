@@ -55,7 +55,7 @@
       "strImageSource": null,
       "strCreativeCommonsConfirmed": null,
       "dateModified": null,
-      "favorite": true
+      "favorite": false
     },
     {
       "id": "52786",
@@ -8154,12 +8154,13 @@
     {
       "strMeal": "Fart Soup",
       "strInstructions": "Fart into a soup",
-      "strSource": "https://i.ebayimg.com/images/g/Z6IAAOSwAK9hyQl4/s-l500.jpg",
+      "strMealThumb": "https://i.ebayimg.com/images/g/Z6IAAOSwAK9hyQl4/s-l500.jpg",
       "strMeasure1": "One Large",
       "strIngredient1": "Fart",
       "strMeasure2": "One Can",
       "strIngredient2": "Soup",
-      "id": "vzuRsRU"
+      "id": "vzuRsRU",
+      "favorite": false
     }
   ],
   "categories": [
@@ -8240,10 +8241,6 @@
       "id": 19
     },
     {
-      "category": "British",
-      "id": 20
-    },
-    {
       "category": "Thai",
       "id": 21
     },
@@ -8274,26 +8271,6 @@
     {
       "category": "Japanese",
       "id": 28
-    },
-    {
-      "category": "Tunisian",
-      "id": 29
-    },
-    {
-      "category": "Jamaican",
-      "id": 30
-    },
-    {
-      "category": "British",
-      "id": 31
-    },
-    {
-      "category": "Thai",
-      "id": 32
-    },
-    {
-      "category": "Japanese",
-      "id": 33
     }
   ]
 }
