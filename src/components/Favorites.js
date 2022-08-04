@@ -1,7 +1,13 @@
 import React, { useState, useEffect } from 'react';
 import MealsContainer from './MealsContainer';
+import CategoryDropdown from './CategoryDropdown';
 
-const Favorites = ({ meals }) => {
+const Favorites = ({
+    meals,
+    categories,
+    onCategorySelect,
+    selectedCategory
+  }) => {
   const [favorites, setFavorites ] = useState([]);
   
   useEffect( () => {
@@ -10,6 +16,7 @@ const Favorites = ({ meals }) => {
         return meal.favorite;
       })
     })
+
   }, [ meals ])
 
   const onRemoveFavorite = (removedMeal) => {
@@ -20,7 +27,15 @@ const Favorites = ({ meals }) => {
 
   return (
     <div>
-      <MealsContainer meals={ favorites } onRemoveFavorite={ onRemoveFavorite } />
+      <CategoryDropdown
+        categories={ categories }
+        onCategorySelect={ onCategorySelect }
+        selectedCategory={ selectedCategory }
+      />
+      <MealsContainer
+        meals={ favorites }
+        onRemoveFavorite={ onRemoveFavorite }
+      />
     </div>
   )
 }

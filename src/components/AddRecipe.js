@@ -49,7 +49,7 @@ const AddRecipe = ( {addMeal} ) => {
 
     const handleSubmit = (e) => {
         console.log("submitted")
-         e.preventDefault();
+        e.preventDefault();
 
           fetch("http://localhost:3001/meals",{
           method : "POST",
@@ -59,7 +59,7 @@ const AddRecipe = ( {addMeal} ) => {
         .then(resp => resp.json())
         .then((mealData) => addMeal(mealData))
 
-         e.target.reset()
+        e.target.reset()
     }
 
     const handleClick = () => {

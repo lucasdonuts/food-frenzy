@@ -1,6 +1,5 @@
 import React, { useState, useEffect } from 'react';
 import MealsContainer from './MealsContainer';
-import CategoryDropDown from './CategoryDropDown';
 
 const Categories = ({ meals, categories }) => {
   const [ selectedCategory, setSelectedCategory ] = useState('All');
@@ -8,6 +7,8 @@ const Categories = ({ meals, categories }) => {
   const onCategorySelect = (e) => {
     setSelectedCategory(e.target.value)
   }
+
+  
 
   // JSON filter pathname and add category buttons
 

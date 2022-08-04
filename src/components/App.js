@@ -5,11 +5,11 @@ import Home from './Home';
 import Favorites from './Favorites';
 import MealPage from './MealPage';
 import AddRecipe from './AddRecipe';
-import Categories from './Categories';
 
 function App() {
   const [ meals, setMeals ] = useState([]);
   const [ categories, setCategories ] = useState([]);
+  const [ selectedCategory, setSelectedCategory ] = useState('All');
 
   useEffect( () => {
     fetch('http://localhost:3001/meals')
@@ -37,6 +37,14 @@ function App() {
   const addMeal = (addedMeal) => {
     setMeals([addedMeal, ...meals])
   }
+  
+  const onCategorySelect = (category) => {
+    setSelectedCategory(category)
+  }
+
+  const mealsToDisplay = meals.filter( meal => {
+    return selectedCategory === 'All' ? true : meal.strArea === selectedCategory
+  })
 
   return (
     <div>
@@ -50,10 +58,20 @@ function App() {
             <AddRecipe addMeal = { addMeal }/>
           </Route>
           <Route path="/favorites">
-            <Favorites meals={ meals } />
+            <Favorites
+              meals={ mealsToDisplay }
+              categories={ categories }
+              selectedCategory={ selectedCategory }
+              onCategorySelect={ onCategorySelect }
+            />
           </Route>
           <Route exact path="/">
-            <Home meals={ meals } categories={ categories } />
+            <Home
+              meals={ mealsToDisplay }
+              categories={ categories }
+              selectedCategory={ selectedCategory }
+              onCategorySelect={ onCategorySelect }
+            />
           </Route>
         </Switch>
       </div>
