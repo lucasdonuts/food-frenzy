@@ -4,7 +4,7 @@ import MealCard from './MealCard';
 import Pagination from 'react-bootstrap/Pagination';
 
 const MealsContainer = ({ meals, onRemoveFavorite}) => {
-  const [ currentPage, setCurrentPage ] = useState(1);
+  const [ currentRange, setCurrentRange ] = useState([0, 20]);
 
   const noMealsMessage = (
     <h4>
@@ -22,20 +22,32 @@ const MealsContainer = ({ meals, onRemoveFavorite}) => {
     )
   })
 
+  // 0, 20
+  // 21, 40
+  // 41, 60
+
   const handlePageClick = (e) => {
-    setCurrentPage(e.target.innerText);
+    const pageNum = e.target.innerText;
+
+    if(pageNum === '1') {
+      setCurrentRange([ 0, 20 ]);
+    } else {
+      const start = pageNum * 20 - 19;
+      const end = pageNum * 20;
+      setCurrentRange([ start, end ]);
+    }
   }
 
   const mealPages = () => {
     let pages = [];
-    let numOfPages = meals.length / 20;
+    let numOfPages = mealComponents.length / 20 + 1;
 
     for( let pageNum = 1; pageNum <= numOfPages; pageNum++ ) {
       pages.push(
         <Pagination.Item
           key={ pageNum }
           onClick={ handlePageClick }
-          active={ currentPage === pageNum }
+          active={ currentRange[1] / 20 === pageNum }
         >
           { pageNum }
         </Pagination.Item>
@@ -45,7 +57,9 @@ const MealsContainer = ({ meals, onRemoveFavorite}) => {
     return pages;
   }
 
-  const mealPage = mealComponents.slice(currentPage, 20);
+  const mealPage = mealComponents.slice(...currentRange);
+
+  console.log(currentRange)
 
   return (
     <>
