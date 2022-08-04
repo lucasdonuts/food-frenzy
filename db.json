@@ -8154,85 +8154,144 @@
   ],
   "categories": [
     {
-      "strArea": "American"
+      "category": "American",
+      "id": 1
     },
     {
-      "strArea": "British"
+      "category": "Kenyan",
+      "id": 2
     },
     {
-      "strArea": "Canadian"
+      "category": "Malaysian",
+      "id": 3
     },
     {
-      "strArea": "Chinese"
+      "category": "Mexican",
+      "id": 4
     },
     {
-      "strArea": "Croatian"
+      "category": "Moroccan",
+      "id": 5
     },
     {
-      "strArea": "Dutch"
+      "category": "British",
+      "id": 6
     },
     {
-      "strArea": "Egyptian"
+      "category": "Polish",
+      "id": 7
     },
     {
-      "strArea": "French"
+      "category": "Canadian",
+      "id": 8
     },
     {
-      "strArea": "Greek"
+      "category": "Russian",
+      "id": 9
     },
     {
-      "strArea": "Indian"
+      "category": "Spanish",
+      "id": 10
     },
     {
-      "strArea": "Irish"
+      "category": "Portuguese",
+      "id": 11
     },
     {
-      "strArea": "Italian"
+      "category": "Unknown",
+      "id": 12
     },
     {
-      "strArea": "Jamaican"
+      "category": "Chinese",
+      "id": 13
     },
     {
-      "strArea": "Japanese"
+      "category": "Vietnamese",
+      "id": 14
     },
     {
-      "strArea": "Kenyan"
+      "category": "Croatian",
+      "id": 15
     },
     {
-      "strArea": "Malaysian"
+      "category": "Dutch",
+      "id": 16
     },
     {
-      "strArea": "Mexican"
+      "category": "Egyptian",
+      "id": 17
     },
     {
-      "strArea": "Moroccan"
+      "category": "Italian",
+      "id": 18
     },
     {
-      "strArea": "Polish"
+      "category": "Irish",
+      "id": 19
     },
     {
-      "strArea": "Portuguese"
+      "category": "British",
+      "id": 20
     },
     {
-      "strArea": "Russian"
+      "category": "Thai",
+      "id": 21
     },
     {
-      "strArea": "Spanish"
+      "category": "Tunisian",
+      "id": 22
     },
     {
-      "strArea": "Thai"
+      "category": "Turkish",
+      "id": 23
     },
     {
-      "strArea": "Tunisian"
+      "category": "French",
+      "id": 24
     },
     {
-      "strArea": "Turkish"
+      "category": "Indian",
+      "id": 25
     },
     {
-      "strArea": "Unknown"
+      "category": "Greek",
+      "id": 26
     },
     {
-      "strArea": "Vietnamese"
+      "category": "Jamaican",
+      "id": 27
+    },
+    {
+      "category": "Japanese",
+      "id": 28
+    },
+    {
+      "category": "Tunisian",
+      "id": 29
+    },
+    {
+      "category": "Jamaican",
+      "id": 30
+    },
+    {
+      "category": "British",
+      "id": 31
+    },
+    {
+      "category": "Thai",
+      "id": 32
+    },
+    {
+      "category": "Japanese",
+      "id": 33
+    },
+    {
+      "category": "Thai",
+      "id": 34
+    },
+    {
+      "category": "Japanese",
+      "id": 35
     }
   ],
   "favorites": []
