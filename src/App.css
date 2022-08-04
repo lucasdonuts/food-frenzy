@@ -1,4 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Sedgwick+Ave&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro&family=Sedgwick+Ave&display=swap');
 
 :root {
   --main-bg-color: 242, 244, 243; /* #f2f4f3 */
@@ -59,6 +60,21 @@ a:hover {
   padding-bottom: 2px;
   padding-left: 15px;
   margin-bottom: 20px;
+}
+
+.page-link {
+  color: rgba(var(--elegant-purple), 1);
+}
+
+.page-link:hover {
+  background-color: rgba(var(--elegant-purple), 0.5);
+  color: rgba(var(--elegant-bg), 1);
+}
+
+.active>.page-link, .page-link.active {
+  border-color:rgba(var(--elegant-purple), 1);
+  background-color: rgba(var(--elegant-purple), 1);
+  color: rgba(var(--elegant-bg), 1);
 }
 
 /* NavBar */
@@ -296,4 +312,11 @@ a:hover {
   height: 60px;
   line-height: 60px;
   width: 100%;
+  color: rgba(var(--elegant-bg), 1);
+  font-family: 'Be Vietnam Pro', sans-serif;
+}
+
+.footer-icon {
+  font-size: 30px;
+  color: rgba(var(--elegant-bg), 1);
 }

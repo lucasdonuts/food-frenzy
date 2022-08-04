@@ -48,7 +48,6 @@ const AddRecipe = ( { addMeal, categories } ) => {
     }
 
     const handleSubmit = (e) => {
-        console.log("submitted")
         e.preventDefault();
 
           fetch("http://localhost:3001/meals",{

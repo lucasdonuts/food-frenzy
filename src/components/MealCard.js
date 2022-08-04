@@ -8,11 +8,9 @@ import Button from 'react-bootstrap/Button';
 const MealCard = ({ meal, onRemoveFavorite }) => {
   const [ isFavorite, setIsFavorite ] = useState(meal.favorite);
 
-  const name = titleCase( meal.strMeal );
+  const name = meal.strMeal ? titleCase( meal.strMeal ) : 'Missing Name'
 
   const updateMeal = () => {
-    console.log(`Inside update before: ${isFavorite}`)
-
     fetch( `http://localhost:3001/meals/${meal.id}`, {
       method: 'PATCH',
       headers: {
@@ -24,9 +22,6 @@ const MealCard = ({ meal, onRemoveFavorite }) => {
     } )
       .then( res => res.json() )
       .then( onRemoveFavorite )
-
-    console.log(`Inside update after: ${isFavorite}`)
-
   }
 
   const handleFavoriteClick = () => {

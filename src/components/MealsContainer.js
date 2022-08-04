@@ -22,10 +22,6 @@ const MealsContainer = ({ meals, onRemoveFavorite}) => {
     )
   })
 
-  // 0, 20
-  // 21, 40
-  // 41, 60
-
   const handlePageClick = (e) => {
     const pageNum = e.target.innerText;
 
@@ -48,6 +44,7 @@ const MealsContainer = ({ meals, onRemoveFavorite}) => {
           key={ pageNum }
           onClick={ handlePageClick }
           active={ currentRange[1] / 20 === pageNum }
+          disabled={ currentRange[1] / 20 === pageNum }
         >
           { pageNum }
         </Pagination.Item>
@@ -58,8 +55,6 @@ const MealsContainer = ({ meals, onRemoveFavorite}) => {
   }
 
   const mealPage = mealComponents.slice(...currentRange);
-
-  console.log(currentRange)
 
   return (
     <>
