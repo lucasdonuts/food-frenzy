@@ -5,7 +5,7 @@ import { LinkContainer } from 'react-router-bootstrap';
 import Card from 'react-bootstrap/Card';
 import Button from 'react-bootstrap/Button';
 
-const MealCard = ({ meal, onRemoveFavorite, onSetCategory }) => {
+const MealCard = ({ meal, onRemoveFavorite }) => {
   const [ isFavorite, setIsFavorite ] = useState(meal.favorite);
 
   const name = titleCase( meal.strMeal );
@@ -19,7 +19,7 @@ const MealCard = ({ meal, onRemoveFavorite, onSetCategory }) => {
         'Content-Type': 'application/json'
       },
       body: JSON.stringify({
-        favorite: isFavorite
+        favorite: !isFavorite
       })
     } )
       .then( res => res.json() )

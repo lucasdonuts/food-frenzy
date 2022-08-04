@@ -1,6 +1,18 @@
-/* :root {
-  --
-} */
+@import url('https://fonts.googleapis.com/css2?family=Sedgwick+Ave&display=swap');
+
+:root {
+  --main-bg-color: 242, 244, 243; /* #f2f4f3 */
+  --blackish: 10, 9, 8; /* #0a0908 */
+  --light-brown: 169, 146, 125; /* #a9927d */
+  --dark-brown: 94, 80, 63; /* #5e503f */
+  --elegant-taupe: 142, 145, 137; /* #8e9189 */
+  --elegant-purple: 73, 68, 73; /* #494449 */
+  --elegant-brown: 133, 127, 116; /* #857f74 */
+  --elegant-bg: 238, 239, 235; /* #eeefeb */
+  --elegant-light-green: 221, 234, 193; /* #ddeac1 */
+  --favorite-btn-hover-opacity: 0.5;
+  --favorite-btn-color: 73, 17, 28; /* #49111c */
+}
 
 body {
   margin: 0 0 20px 0;
@@ -9,6 +21,7 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  background-color: rgba(var(--elegant-bg), 1);
 }
 
 code {
@@ -27,12 +40,25 @@ a:hover {
 
 #main {
   text-align: center;
+  margin-top: 20px;
+}
+
+.custom-select {
+  width: 180px;
+  height: 30px;
+  text-align: center;
+  color: rgba(var(--blackish), 1);
+  font-size: medium;
+  border-radius: 10px;
+  background: white;
+  padding-bottom: 2px;
+  padding-left: 15px;
+  margin-bottom: 20px;
 }
 
 /* NavBar */
 .navbar {
-  /* display: flex; */
-  /* justify-content: space-between; */
+  background-color: rgba(var(--elegant-purple), 1) !important;
   height: 60px;
   line-height: 60px;
   padding-left: 1.5rem;
@@ -40,8 +66,9 @@ a:hover {
 }
 
 .navbar-brand {
-  color: white;
+  color: rgba(var(--elegant-bg), 1);
   font-weight: 600;
+  font-family: 'Sedgwick Ave', cursive;
 }
 
 #logo {
@@ -49,13 +76,23 @@ a:hover {
   max-height: 60px;
 }
 
+.navbar-nav {
+  color: var(--elegant-bg);
+}
+
 .navbar-nav .nav-link.active,
 .nav-link:focus {
-  background-color: white;
+  background-color: rgba(var(--elegant-light-green), 1);
   color: black;
+  padding-bottom: 0;
 }
 
 /* MealsContainer */
+#page-select-container {
+  display: flex;
+  justify-content: center;
+}
+
 .meals-container {
   display: flex;
   flex-wrap: wrap;
@@ -129,11 +166,38 @@ a:hover {
 #buttons {
   width: 400px;
   display: flex;
-  justify-content: space-between;
+  justify-content: space-around;
 }
 
-.button-success.active {
-  min-width: 170px;
+.youtube-btn {
+  background-color: white;
+  border-color: rgba(var(--dark-brown), 1);
+}
+
+.btn-success {
+  border: none;
+  background-color: rgba(var(--elegant-purple), 1);
+  color: rgba(var(--elegant-bg), 1);
+}
+
+.favorite-btn {
+  width: 45%;
+  background-color: rgba(var(--favorite-btn-color), 1);
+}
+
+.favorite-btn:hover {
+  background-color: rgba(var(--favorite-btn-color), var(--favorite-btn-hover-opacity));
+}
+
+.favorite-btn:focus {
+  background-color: rgba(var(--favorite-btn-color), 1);
+  border: none;
+  box-shadow: none;
+}
+
+.favorite-btn:active {
+  border: none;
+  box-shadow: none !important;
 }
 
 #ingredient-list {
@@ -176,34 +240,29 @@ a:hover {
   padding: 0 0.5em;
   line-height: 1.5em;
   color: black;
-  background-color: white;
+  background-color: rgba(var(--elegant-bg), 1);
 }
 
-.mb-3{
-  padding: 20px
-}
-
+/* Recipe Form */
 .recipe-form{
-  border: 2px solid black;
-  background-color:blanchedalmond;
+  border: 2px solid rgba(var(--elegant-purple), 1);
+  background-color: rgba(var(--elegant-taupe), 0.5);
   border-radius: 10px;
   margin-top: 20px;
+  padding-right: 20px;
+  color: rgba(var(--elegant-purple), 1);
 }
 
-.custom-select{
-  width: 180px;
-  height: 30px;
-  text-align: center;
-  color: white;
-  font-size: medium;
-  border-radius: 10px;
-  background: #0d925b;
-  padding-bottom: 2px;
-  padding-left: 15px;
-}
-
-.main-page{
+.form-heading {
   margin-top: 20px;
+  font-family: 'Sedgwick Ave', cursive;
 }
 
+.amount-input {
+  width: 25%;
+}
 
+#footer {
+  background-color: rgba(var(--elegant-purple), 1);
+  width: 100%;
+}

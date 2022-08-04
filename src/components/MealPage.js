@@ -98,8 +98,6 @@ const MealPage = ({ onMealUpdate }) => {
       return <p key={ `${ meal.id }-${ index }` }>{ step }</p>
     })
 
-  const hasVideoLink = !!meal.strYoutube
-
   return (
     <Container id="recipe-container">
         <Image
@@ -109,6 +107,7 @@ const MealPage = ({ onMealUpdate }) => {
         <h4>{ titleCase( name ) }</h4>
         <Container id="buttons">
           <Button
+            className={ `favorite-btn ${ isFavorite ? 'favorited' : '' }` }
             onClick={ handleFavoriteClick }
             variant="success"
             size="sm"
@@ -117,6 +116,7 @@ const MealPage = ({ onMealUpdate }) => {
           </Button>
           <a href={ meal.strYoutube } target="_blank" rel="noreferrer">
             <Button
+              className="youtube-btn"
               variant={ meal.strYoutube ? "outline-secondary" : "secondary" }
               size="sm"
               disabled={ meal.strYoutube ? false : true }

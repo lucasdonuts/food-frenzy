@@ -6,6 +6,7 @@ const Home = ({ meals, categories, onCategorySelect, selectedCategory }) => {
   
   return (
     <div className="main-page">
+      <h5>Category</h5>
       <CategoryDropdown
         categories={ categories }
         onCategorySelect={ onCategorySelect }

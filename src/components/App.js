@@ -5,6 +5,7 @@ import Home from './Home';
 import Favorites from './Favorites';
 import MealPage from './MealPage';
 import AddRecipe from './AddRecipe';
+import Footer from './Footer';
 
 function App() {
   const [ meals, setMeals ] = useState([]);
@@ -78,6 +79,7 @@ function App() {
           </Route>
         </Switch>
       </div>
+      <Footer />
     </div>
   );
 }

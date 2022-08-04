@@ -16,7 +16,7 @@ const AddRecipe = ( { addMeal, categories } ) => {
       for(let i=1; i<=ingredientCount; i++) {
         inputArray.push(
           <Row key={ `ingredient-${ i }` }>
-            <Col className="col-md-auto p-1">
+            <Col className="p-1 col-auto amount-input">
               <Form.Group 
                 onChange={ handleChange }
                 className= "measurement" 
@@ -24,7 +24,7 @@ const AddRecipe = ( { addMeal, categories } ) => {
               >
                 <Form.Control
                   type="text"
-                  placeholder="Measurement"
+                  placeholder="Amount"
                 />
               </Form.Group>
             </Col>
@@ -79,7 +79,7 @@ const AddRecipe = ( { addMeal, categories } ) => {
       const category = cat.category;
   
       return (
-        <option value={ category }>{ category }</option>
+        <option key={ category } value={ category }>{ category }</option>
       )
     })
 
@@ -124,7 +124,7 @@ const AddRecipe = ( { addMeal, categories } ) => {
 
               </Col>
             </Row>
-            <Row className="mb-3">
+            <Row className="m-3">
               
               <Button type ="submit" variant="success">Add Recipe</Button>
 
