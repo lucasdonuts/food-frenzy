@@ -26,17 +26,17 @@ const Favorites = ({
   }
 
   return (
-    <div>
-    <h5>Category</h5>
-      <CategoryDropdown
-        categories={ categories }
-        onCategorySelect={ onCategorySelect }
-        selectedCategory={ selectedCategory }
-      />
-      <MealsContainer
-        meals={ favorites }
-        onRemoveFavorite={ onRemoveFavorite }
-      />
+    <div id="favorites-container">
+      <h5>Category</h5>
+        <CategoryDropdown
+          categories={ categories }
+          onCategorySelect={ onCategorySelect }
+          selectedCategory={ selectedCategory }
+        />
+        <MealsContainer
+          meals={ favorites }
+          onRemoveFavorite={ onRemoveFavorite }
+        />
     </div>
   )
 }

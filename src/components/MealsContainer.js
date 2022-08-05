@@ -59,10 +59,13 @@ const MealsContainer = ({ meals, onRemoveFavorite}) => {
   return (
     <>
       <Container className="meals-container">
-        <Container id="page-select-container">
+        <Container className="page-select-container">
           <Pagination>{ mealPages() }</Pagination>
         </Container>
         { mealPage.length > 0 ? mealPage : noMealsMessage }
+        <Container className="page-select-container">
+          <Pagination>{ mealPages() }</Pagination>
+        </Container>
       </Container>
     </>
   )
