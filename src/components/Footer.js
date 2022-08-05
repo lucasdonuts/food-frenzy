@@ -11,12 +11,16 @@ const Footer = () => {
         <Container>
           <Row>
             <Col>
-              <GoMarkGithub className="footer-icon m-2" />
-              lucasdonuts
+              <a href="https://github.com/lucasdonuts" target="_blank" rel="noreferrer">
+                <GoMarkGithub className="footer-icon m-2" />
+                lucasdonuts
+              </a>
             </Col>
             <Col>
-              <GoMarkGithub className="footer-icon m-2" />
-              aiodell
+              <a href="https://github.com/aiodell" target="_blank" rel="noreferrer">
+                <GoMarkGithub className="footer-icon m-2" />
+                aiodell
+              </a>
             </Col>
           </Row>
         </Container>
